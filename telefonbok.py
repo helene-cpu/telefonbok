@@ -13,7 +13,7 @@ def vis_alle(person):
 for t in telefonbok:
     vis_alle(t)
 
-
+#OPPGAVE 3
 def legg_til():
     navn= input(f"Skriv navn på personen du vil legge til: ")
     nummer= input(f"Skriv nummeret til personen du akkurat skrev navnet på: ")
@@ -24,3 +24,17 @@ def legg_til():
 
 legg_til()
 
+for t in telefonbok:
+    vis_alle(t)
+
+#OPPGAVE 4
+def søk():
+    finn_person = input(f"\n Skriv navnet på personen du vil finne: ")
+    for person in telefonbok:
+        if person['navn'].lower() == finn_person.lower():
+            print(f"\n {person['navn']} : {person['nummer']}")
+            break
+    else:
+        print(f"Finner ikke personen")
+
+søk()
