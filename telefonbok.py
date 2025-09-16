@@ -38,3 +38,23 @@ def søk():
         print(f"Finner ikke personen")
 
 søk()
+
+# OPPGAVE 5
+while True:
+     valg = input(f"\n 1. Vis alle \n 2. Legg til ny \n 3. Søk \n 4. Avslutt \n \n")
+
+     if valg == "1":
+        for t in telefonbok:
+            vis_alle(t)
+
+     elif valg == "2":
+         legg_til()
+
+     elif valg=="3":
+         søk()
+
+     elif valg== "4":
+         print(f"Programmet avsluttes")
+         break
+     else:
+         print(f"Det du skrev er ikke gyldig, vennsligst prøv igjen")
